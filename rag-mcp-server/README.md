@@ -12,7 +12,7 @@ connect to this server and retrieve semantically relevant context from the knowl
 - FastMCP — MCP server framework
 - ChromaDB — local vector store
 - sentence-transformers — open-source embeddings (no API key required)
-- Python 3.11+
+- Python 3.13+
 
 ## Architecture
 documents → embeddings → ChromaDB → FastMCP tool → MCP-compatible agents

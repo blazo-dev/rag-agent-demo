@@ -12,7 +12,7 @@ Gemini 2.0 Flash. Demonstrates agentic tool use with external MCP integration.
 - Strands Agents — agentic framework
 - FastMCP client — MCP tool integration
 - Google Gemini 2.0 Flash — LLM (free tier via Google AI Studio)
-- Python 3.11+
+- Python 3.13+
 
 ## Architecture
 user query → Strands Agent → MCP tool call → rag-mcp-server → ChromaDB

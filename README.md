@@ -41,4 +41,4 @@ Grounded Response
 ## Tech Stack
 - Strands Agents · FastMCP · ChromaDB
 - sentence-transformers · Google Gemini 2.0 Flash
-- Python 3.11+
+- Python 3.13+
