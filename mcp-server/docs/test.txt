@@ -1,0 +1,7 @@
+Bryan Lazo is an AI Engineer with experience building RAG pipelines on AWS.
+He worked at AAA Auto Club Enterprises where he built an MCP server using FastMCP 
+and AWS AgentCore to connect Salesforce Agentforce agents to internal Bedrock 
+Knowledge Bases. He also engineered a custom Lambda function for chunk-level 
+metadata injection that improved chatbot accuracy by 80% and reduced latency by 25%.
+He holds an AWS Certified Cloud Practitioner certification and is currently 
+pursuing the AWS Solutions Architect Associate.
