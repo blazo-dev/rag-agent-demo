@@ -2,7 +2,8 @@
 
 ## Goal
 
-Build an end-to-end RAG-powered AI agent using MCP as the tool integration protocol, with a React chat UI for interaction.
+Build an end-to-end RAG-powered AI agent using MCP as the tool integration protocol,
+with a React chat UI for interaction. Fully local — no cloud APIs required.
 
 ## Components
 
@@ -12,7 +13,7 @@ Build an end-to-end RAG-powered AI agent using MCP as the tool integration proto
 
 ## Tech Stack
 
-FastMCP, ChromaDB, sentence-transformers, Strands Agents, Google Gemini 2.0 Flash, FastAPI, React, Docker, Python 3.12
+FastMCP, ChromaDB, sentence-transformers, Strands Agents, Ollama llama3.2, FastAPI, React, Python 3.12+
 
 ## Core Flow
 
@@ -21,25 +22,26 @@ FastMCP, ChromaDB, sentence-transformers, Strands Agents, Google Gemini 2.0 Flas
 3. Strands Agent calls `query_knowledge_base` tool via MCP
 4. MCP server retrieves relevant chunks from ChromaDB
 5. Context returned to agent
-6. Gemini 2.0 Flash generates grounded response
+6. Ollama llama3.2 generates grounded response locally
 7. Response rendered in React UI
 
 ## Infrastructure
 
-- Docker + Docker Compose
-- mcp-server, agent-api, and ui run as separate containers
+- Single shared venv at project root managed by uv
+- mcp-server and agent-api run as separate processes
 - agent-api exposes POST /chat endpoint via FastAPI
 - UI communicates with agent-api via REST
-- Internal Docker network between mcp-server and agent-api
-- Environment variables managed via .env file
+- Ollama runs as a local service on port 11434
+- Environment variables managed via .env file in agent-api/
 
 ## MVP Scope
 
-- [ ] Ingest .txt or .pdf documents into ChromaDB
-- [ ] Expose retrieval as MCP tool via FastMCP
-- [ ] Wrap Strands Agent in FastAPI with POST /chat endpoint
+- [x] Ingest .txt documents into ChromaDB
+- [x] Expose retrieval as MCP tool via FastMCP
+- [x] Wrap Strands Agent in FastAPI with POST /chat endpoint
+- [x] Agent returns grounded answer using Ollama locally
 - [ ] Connect React UI to agent-api
-- [ ] Full stack runs with docker-compose up
+- [ ] Full stack documented and ready for demo
 
 ## Out of Scope
 
@@ -52,5 +54,5 @@ FastMCP, ChromaDB, sentence-transformers, Strands Agents, Google Gemini 2.0 Flas
 
 - Agent answers accurately based only on ingested documents
 - MCP tool call visible in agent reasoning trace
-- Full stack spins up with docker-compose up
 - Chat UI functional and clean
+- Project runs fully local with no external API dependencies
