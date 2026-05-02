@@ -36,4 +36,4 @@ Then open http://localhost:3000
 
 ## Tech Stack
 
-FastMCP · ChromaDB · sentence-transformers · Strands Agents · Google Gemini 2.0 Flash · FastAPI · React · Docker · Docker Compose · Python 3.11+
+FastMCP · ChromaDB · sentence-transformers · Strands Agents · Google Gemini 2.0 Flash · FastAPI · React · Docker · Docker Compose · Python 3.12

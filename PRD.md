@@ -12,7 +12,7 @@ Build an end-to-end RAG-powered AI agent using MCP as the tool integration proto
 
 ## Tech Stack
 
-FastMCP, ChromaDB, sentence-transformers, Strands Agents, Google Gemini 2.0 Flash, FastAPI, React, Docker, Python 3.11+
+FastMCP, ChromaDB, sentence-transformers, Strands Agents, Google Gemini 2.0 Flash, FastAPI, React, Docker, Python 3.12
 
 ## Core Flow
 

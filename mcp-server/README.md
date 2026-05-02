@@ -15,7 +15,7 @@ tool for any MCP-compatible agent.
 - FastMCP
 - ChromaDB
 - sentence-transformers
-- Python 3.11+
+- Python 3.12
 
 ## Inspired by
 

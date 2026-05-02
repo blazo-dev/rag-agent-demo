@@ -15,7 +15,7 @@ context and generates grounded responses using Google Gemini 2.0 Flash.
 - Strands Agents
 - FastAPI
 - Google Gemini 2.0 Flash
-- Python 3.11+
+- Python 3.12
 
 ## Endpoints
 
