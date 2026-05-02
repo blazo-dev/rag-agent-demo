@@ -4,7 +4,7 @@ End-to-end RAG-powered AI agent using MCP protocol for tool integration — Fast
 
 ## Architecture
 
-```
+```plaintext
 User (React UI)
     ↓ HTTP POST /chat
 Agent API (FastAPI)
@@ -32,7 +32,7 @@ cp .env.example .env
 docker-compose up --build
 ```
 
-Then open http://localhost:3000
+Then open <http://localhost:3000>
 
 ## Tech Stack
 

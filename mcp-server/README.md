@@ -1,6 +1,6 @@
 # MCP Server
 
-FastMCP server that wraps a local RAG pipeline and exposes a `query_knowledge_base` 
+FastMCP server that wraps a local RAG pipeline and exposes a `query_knowledge_base`
 tool for any MCP-compatible agent.
 
 ## What it does
@@ -19,5 +19,5 @@ tool for any MCP-compatible agent.
 
 ## Inspired by
 
-Production work integrating AWS AgentCore Gateway + Bedrock Knowledge Bases at 
+Production work integrating AWS AgentCore Gateway + Bedrock Knowledge Bases at
 enterprise scale. This project replicates the core pattern using open-source tooling.

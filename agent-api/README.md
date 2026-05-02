@@ -1,6 +1,6 @@
 # Agent API
 
-Strands Agent wrapped in a FastAPI REST layer. Connects to the MCP server to retrieve 
+Strands Agent wrapped in a FastAPI REST layer. Connects to the MCP server to retrieve
 context and generates grounded responses using Google Gemini 2.0 Flash.
 
 ## What it does
