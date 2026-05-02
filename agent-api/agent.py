@@ -1,14 +1,18 @@
 import os
-from strands import Agent, tool
-from strands.models import BedrockModel
-from fastmcp import Client
 import asyncio
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-MCP_SERVER_URL = os.getenv("MCP_SERVER_URL", "http://localhost:8000/mcp")
+from fastmcp import Client
+from strands import Agent, tool
+from strands.models.ollama import OllamaModel
 
-if GEMINI_API_KEY:
-    os.environ["GOOGLE_API_KEY"] = GEMINI_API_KEY
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except Exception:
+    pass
+
+MCP_SERVER_URL = os.getenv("MCP_SERVER_URL", "http://localhost:8000/mcp")
 
 
 @tool
@@ -24,7 +28,10 @@ def query_knowledge_base(query: str) -> str:
 
 
 def create_agent() -> Agent:
-    model = "gemini-2.0-flash"
+    model = OllamaModel(
+        model_id="llama3.2",
+        host="http://localhost:11434",
+    )
 
     agent = Agent(
         model=model,
