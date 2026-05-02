@@ -1,44 +1,39 @@
-# RAG Agent with MCP Integration — End to End Demo
+# RAG Agent Demo
 
-A full end-to-end demonstration of a RAG-powered AI agent using the
-Model Context Protocol (MCP) for tool integration. Built entirely with
-open-source tooling and free APIs.
-
-## Overview
-This project consists of two components working together:
-
-1. **rag-mcp-server** — An MCP server that wraps a local RAG pipeline
-   (ChromaDB + sentence-transformers) and exposes it as a callable tool.
-
-2. **strands-rag-agent** — An AI agent built with Strands Agents that
-   connects to the MCP server, retrieves relevant context, and generates
-   grounded answers using Google Gemini 2.0 Flash.
-
-## Why this matters
-Modern enterprise AI systems separate knowledge retrieval from agent logic.
-The MCP protocol is the emerging standard that makes this separation possible —
-allowing any MCP-compatible agent (including Salesforce Agentforce and AWS Bedrock
-Agents) to connect to any MCP-compatible knowledge source.
-
-This project demonstrates that pattern end to end, from document ingestion
-to agent response.
+End-to-end RAG-powered AI agent using MCP protocol for tool integration — FastMCP server with ChromaDB + sentence-transformers as knowledge base, consumed by a Strands Agent powered by Google Gemini, with a React chat interface.
 
 ## Architecture
+
 ```
-User Query
-    ↓
-Strands Agent (strands-rag-agent)
+User (React UI)
+    ↓ HTTP POST /chat
+Agent API (FastAPI)
     ↓ MCP tool call
-RAG MCP Server (rag-mcp-server)
+MCP Server (FastMCP)
     ↓ vector search
 ChromaDB + sentence-transformers
     ↓ context returned
-Strands Agent → Gemini 2.0 Flash
+Gemini 2.0 Flash
     ↓
-Grounded Response
+Response rendered in UI
 ```
 
+## Services
+
+- **mcp-server** — FastMCP server exposing a `query_knowledge_base` tool backed by ChromaDB
+- **agent-api** — Strands Agent wrapped in a FastAPI REST layer
+- **ui** — React chat interface
+
+## Quick Start
+
+```bash
+cp .env.example .env
+# Add your GEMINI_API_KEY to .env
+docker-compose up --build
+```
+
+Then open http://localhost:3000
+
 ## Tech Stack
-- Strands Agents · FastMCP · ChromaDB
-- sentence-transformers · Google Gemini 2.0 Flash
-- Python 3.13+
+
+FastMCP · ChromaDB · sentence-transformers · Strands Agents · Google Gemini 2.0 Flash · FastAPI · React · Docker · Docker Compose · Python 3.11+
