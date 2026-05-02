@@ -189,3 +189,15 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/react,python
+
+# uv
+.uv/
+
+# ChromaDB generated data
+chroma_db/
+
+# HuggingFace model cache
+*.cache/
+
+# Sentence transformers cache
+.cache/
