@@ -1,42 +1,109 @@
-Bryan Lazo
-AI Engineer | RAG Systems & Agentic Architectures on AWS
-blazo.dev@gmail.com | +1 (469) 509-2260 | linkedin.com/in/bryanlazodev | github.com/blazo-dev | A.S. in Computer Engineering
+FULL NAME: Bryan Lazo
+TITLE: AI Engineer | RAG Systems and Agentic Architectures on AWS
+EMAIL: blazo.dev@gmail.com
+PHONE: +1 (469) 509-2260
+LINKEDIN: linkedin.com/in/bryanlazodev
+GITHUB: github.com/blazo-dev
+EDUCATION: Associate's Degree in Computer Engineering, Universidad Gerardo Barrios, El Salvador
 
-PROFESSIONAL SUMMARY
-AI Engineer with 3+ years of hands-on experience building and deploying production-grade RAG pipelines and agentic systems on AWS; a contributor who designs, codes, and ships AI infrastructure across Bedrock Knowledge Bases, MCP integrations, and cloud-native environments.
+PROFESSIONAL SUMMARY:
+Bryan Lazo is an AI Engineer with 3+ years of hands-on experience building and deploying production-grade RAG pipelines and agentic systems on AWS. He designs, codes, and ships AI infrastructure across Bedrock Knowledge Bases, MCP integrations, and cloud-native environments.
 
-WORK EXPERIENCE
+CURRENT ROLE:
+Company: AAA Auto Club Enterprises (contracted via Workforce Opportunity Services)
+Title: Jr. Software Engineer, AI/Cloud Team
+Start Date: July 2025
+Location: Coppell, TX, United States
+Employment Type: Contractor via WOS (Workforce Opportunity Services)
+Status: Active/Current
 
-Workforce Opportunity Services / AAA Auto Club Enterprises | Jr. Software Engineer, AI/Cloud Team
-July 2025 – Present | Coppell, TX
+CURRENT ROLE RESPONSIBILITIES:
 - Designed and deployed an enterprise MCP server using FastMCP and AWS AgentCore (Runtime + Gateway), enabling external agents including Salesforce Agentforce to access internal Bedrock Knowledge Bases via standard MCP protocols.
 - Engineered a custom AWS Lambda transformation function for chunk-level metadata injection during Bedrock KB ingestion pipeline, improving chatbot response accuracy by 80% and reducing latency by 25%.
 - Participated in migration from Bedrock Agents to AgentCore with Strands Agents, contributing to production deployments of agentic AI systems serving enterprise call center operations.
-- Designed and developed production-grade React frontend for internal AI chatbot used by call center agents during live customer interactions to query enterprise Knowledge Bases in real time.
-- Configured Amazon Cognito authentication and AgentCore Gateway for secure external agent access; deployed containerized MCP services via Docker to AgentCore Runtime (ECS-based).
+- Designed and developed production-grade React frontend for the internal AI chatbot, used by call center agents during live customer interactions to query enterprise Knowledge Bases in real time.
+- Configured Amazon Cognito authentication and AgentCore Gateway for secure external agent access.
+- Deployed containerized MCP services via Docker to AgentCore Runtime (ECS-based).
 - Maintained AWS Lambda functions, DynamoDB data pipelines, and CI/CD workflows using GitHub Actions and AWS CDK (Python).
 
-Grupo Consiti | Java Software Engineer
-June 2023 – November 2023 | San Salvador, El Salvador
-- Developed scalable backend services using Java Spring Boot and Node.js deployed on AWS for multinational retail enterprise SIMAN, operating across Central America.
+PREVIOUS ROLE 1:
+Company: Grupo Consiti
+Title: Java Software Engineer
+Dates: June 2023 to November 2023
+Location: San Salvador, El Salvador
+Responsibilities:
+- Developed scalable backend services using Java Spring Boot and Node.js deployed on AWS for SIMAN, a multinational retail enterprise operating across Central America.
 - Automated and optimized multi-region ETL pipelines using UC4, handling high-volume transactional data across multiple countries.
-- Collaborated on architecture and development of electronic invoicing system (NestJS) to meet national e-billing compliance regulations in El Salvador.
-- Formally trained and mentored 8 junior developers in Spring Boot and backend best practices; 6 were subsequently hired full-time. Recognized with formal company commendation.
+- Collaborated on architecture and development of an electronic invoicing system using NestJS to meet national e-billing compliance regulations in El Salvador.
+- Formally trained and mentored 8 junior developers in Spring Boot and backend best practices. Six of those developers were subsequently hired full-time.
+- Received a formal company commendation for contributions to the training program.
 
-Royal Prestige | Sales Representative
-October 2023 – January 2025 | Dallas-Fort Worth, TX
-- Developed negotiation, objection handling, and adaptability skills in a high-pressure self-managed sales environment.
+PREVIOUS ROLE 2:
+Company: Royal Prestige
+Title: Sales Representative
+Dates: October 2023 to January 2025
+Location: Dallas-Fort Worth, TX
+Note: This was a sales role taken during a career transition period, not a software engineering position.
+Responsibilities:
+- Developed negotiation, objection handling, and adaptability skills in a high-pressure self-managed outside sales environment.
 
-Applaudo Studios | Angular Developer
-November 2022 – April 2023 | San Salvador, El Salvador
-- Developed responsive UIs using Angular with REST API integration; wrote unit and integration tests using Jest; participated in agile sprints and code reviews.
+PREVIOUS ROLE 3:
+Company: Applaudo Studios
+Title: Angular Developer
+Dates: November 2022 to April 2023
+Location: San Salvador, El Salvador
+Responsibilities:
+- Developed responsive UIs using Angular with REST API integration.
+- Wrote unit and integration tests using Jest.
+- Participated in agile sprints and peer code reviews.
 
-SKILLS
-AI and Cloud: Amazon Bedrock, Bedrock Knowledge Bases, AgentCore Runtime and Gateway, Strands Agents, FastMCP, MCP Protocol, RAG Pipelines, Chunk-level Metadata, Prompt Engineering, Amazon Cognito, AWS Lambda, DynamoDB, S3, CloudWatch, AWS CDK (Python), Docker, GitHub Actions
+COMPLETE WORK HISTORY IN ORDER:
+1. Applaudo Studios - Angular Developer - November 2022 to April 2023
+2. Grupo Consiti - Java Software Engineer - June 2023 to November 2023
+3. Royal Prestige - Sales Representative - October 2023 to January 2025
+4. AAA Auto Club Enterprises via WOS - Jr. Software Engineer AI/Cloud - July 2025 to Present
 
-Languages and Frameworks: Python, JavaScript, TypeScript, React, Java, Spring Boot, NestJS, Node.js, C#, ASP.NET, Angular, HTML, CSS
+TECHNICAL SKILLS:
 
-Tools and Practices: Git, Postman, Agile/Scrum, CI/CD, Infrastructure as Code (IaC), REST APIs, ETL Pipelines
+AI and Cloud:
+Amazon Bedrock, Bedrock Knowledge Bases, AgentCore Runtime and Gateway, Strands Agents, FastMCP, MCP Protocol, RAG Pipelines, Chunk-level Metadata Injection, Prompt Engineering, Amazon Cognito, AWS Lambda, DynamoDB, S3, CloudWatch, AWS CDK with Python, Docker, GitHub Actions
 
-CERTIFICATIONS
-- AWS Certified Cloud Practitioner — Amazon Web Services, February 2026
+Languages and Frameworks:
+Python, JavaScript, TypeScript, React, Java, Spring Boot, NestJS, Node.js, C#, ASP.NET, Angular, HTML, CSS
+
+Tools and Practices:
+Git, Postman, Agile, Scrum, CI/CD, Infrastructure as Code, REST APIs, ETL Pipelines
+
+CERTIFICATIONS:
+- AWS Certified Cloud Practitioner — Amazon Web Services, obtained February 2026
+- AWS Solutions Architect Associate — Currently in progress
+
+KEY ACHIEVEMENTS:
+- Improved enterprise chatbot response accuracy by 80% through custom Lambda metadata injection
+- Reduced chatbot response latency by 25% through chunk-level metadata optimization
+- Mentored 8 junior developers at Grupo Consiti, 6 of whom were hired full-time
+- Received formal company commendation from Grupo Consiti for training program contributions
+- Built and deployed production MCP server connecting Salesforce Agentforce to AWS Bedrock Knowledge Bases
+
+FREQUENTLY ASKED QUESTIONS:
+
+Q: What is Bryan's current job?
+A: Bryan currently works as a Jr. Software Engineer on the AI/Cloud team at AAA Auto Club Enterprises, contracted through Workforce Opportunity Services. He is based in Coppell, TX.
+
+Q: How many years of experience does Bryan have?
+A: Bryan has 3+ years of professional software engineering experience, starting in November 2022 at Applaudo Studios.
+
+Q: What companies has Bryan worked for?
+A: Bryan has worked for Applaudo Studios, Grupo Consiti, Royal Prestige, and AAA Auto Club Enterprises via Workforce Opportunity Services.
+
+Q: What is Bryan's main expertise?
+A: Bryan specializes in AI engineering, specifically RAG pipelines, agentic systems, and MCP integrations on AWS using services like Amazon Bedrock, AgentCore, and Strands Agents.
+
+Q: Does Bryan know React?
+A: Yes. Bryan developed a production-grade React frontend for an internal AI chatbot at AAA Auto Club Enterprises used by call center agents in real time.
+
+Q: What AWS services does Bryan know?
+A: Bryan has hands-on experience with Amazon Bedrock, Bedrock Knowledge Bases, AgentCore Runtime and Gateway, AWS Lambda, DynamoDB, S3, CloudWatch, Amazon Cognito, AWS CDK with Python, and GitHub Actions for CI/CD.
+
+Q: Is Bryan available for new opportunities?
+A: For availability and inquiries, please contact Bryan at blazo.dev@gmail.com or via LinkedIn at linkedin.com/in/bryanlazodev.
