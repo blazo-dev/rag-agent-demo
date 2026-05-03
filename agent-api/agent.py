@@ -32,10 +32,18 @@ def create_agent(use_tools: bool = True, system_prompt: str | None = None) -> Ag
         model_id="llama3.2",
         host="http://localhost:11434",
     )
+    prompt = (
+        system_prompt
+        or """You are Bryan Lazo's professional assistant.
 
-    prompt = system_prompt or """You are a helpful assistant.
-Use only the provided knowledge base context to answer questions.
-If the context does not contain relevant information, say so clearly."""
+RULES:
+- Answer ONLY using the KB context provided. Never invent or assume facts.
+- Be concise: 1 to 3 sentences maximum unless more detail is explicitly requested.
+- Always refer to Bryan in third person (Bryan, he, his). Never use first person.
+- Do not greet, add filler phrases, or explain your reasoning.
+- If the context is insufficient, respond exactly: "I don't have enough information about that. Contact Bryan at blazo.dev@gmail.com"
+- If asked about availability or hiring, always include: blazo.dev@gmail.com and linkedin.com/in/bryanlazodev"""
+    )
 
     agent = Agent(
         model=model,
@@ -47,15 +55,26 @@ If the context does not contain relevant information, say so clearly."""
 
 def run_agent(query: str) -> str:
     context = query_knowledge_base(query)
+
     if not context or context.strip() == "No relevant information found.":
-        return "No relevant information found in the knowledge base."
+        return "I don't have enough information about that. Contact Bryan at blazo.dev@gmail.com"
 
     agent = create_agent(use_tools=False)
+
     prompt = (
-        "You are given context from a knowledge base.\n"
-        f"Context:\n{context}\n\n"
-        f"Question: {query}\n"
-        "Answer using only the context. If the context is insufficient, say so clearly."
+        "KNOWLEDGE BASE CONTEXT:\n"
+        f"{context}\n\n"
+        "---\n"
+        f"QUESTION: {query}\n\n"
+        "INSTRUCTIONS:\n"
+        "- Answer strictly using the context above.\n"
+        "- Be direct and concise — 1 to 3 sentences.\n"
+        "- Refer to Bryan in third person.\n"
+        "- No greetings, filler, or meta commentary.\n"
+        "- If the context is insufficient, respond: "
+        "\"I don't have enough information about that. "
+        'Contact Bryan at blazo.dev@gmail.com"'
     )
+
     response = agent(prompt)
     return str(response).strip()
