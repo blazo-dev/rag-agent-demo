@@ -27,24 +27,35 @@ def query_knowledge_base(query: str) -> str:
     return asyncio.run(_query())
 
 
-def create_agent() -> Agent:
+def create_agent(use_tools: bool = True, system_prompt: str | None = None) -> Agent:
     model = OllamaModel(
         model_id="llama3.2",
         host="http://localhost:11434",
     )
 
+    prompt = system_prompt or """You are a helpful assistant.
+Use only the provided knowledge base context to answer questions.
+If the context does not contain relevant information, say so clearly."""
+
     agent = Agent(
         model=model,
-        tools=[query_knowledge_base],
-        system_prompt="""You are a helpful assistant with access to a knowledge base.
-Always query the knowledge base before answering questions.
-Base your answers only on the retrieved context.
-If the knowledge base does not contain relevant information, say so clearly.""",
+        tools=[query_knowledge_base] if use_tools else [],
+        system_prompt=prompt,
     )
     return agent
 
 
 def run_agent(query: str) -> str:
-    agent = create_agent()
-    response = agent(query)
-    return str(response)
+    context = query_knowledge_base(query)
+    if not context or context.strip() == "No relevant information found.":
+        return "No relevant information found in the knowledge base."
+
+    agent = create_agent(use_tools=False)
+    prompt = (
+        "You are given context from a knowledge base.\n"
+        f"Context:\n{context}\n\n"
+        f"Question: {query}\n"
+        "Answer using only the context. If the context is insufficient, say so clearly."
+    )
+    response = agent(prompt)
+    return str(response).strip()
