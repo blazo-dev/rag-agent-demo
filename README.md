@@ -52,6 +52,11 @@ uv run python server.py
 # 6. Start Agent API (terminal 2)
 cd agent-api
 uv run uvicorn main:app --host 0.0.0.0 --port 8001 --reload
+
+# 7. Start React UI (terminal 3)
+cd ui
+pnpm install
+pnpm dev
 ```
 
 ## Tech Stack
