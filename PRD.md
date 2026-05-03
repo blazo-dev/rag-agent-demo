@@ -40,8 +40,8 @@ FastMCP, ChromaDB, sentence-transformers, Strands Agents, Ollama llama3.2, FastA
 - [x] Expose retrieval as MCP tool via FastMCP
 - [x] Wrap Strands Agent in FastAPI with POST /chat endpoint
 - [x] Agent returns grounded answer using Ollama locally
-- [ ] Connect React UI to agent-api
-- [ ] Full stack documented and ready for demo
+- [x] Connect React UI to agent-api
+- [x] Full stack documented and ready for demo
 
 ## Out of Scope
 
