@@ -1,0 +1,42 @@
+Bryan Lazo
+AI Engineer | RAG Systems & Agentic Architectures on AWS
+blazo.dev@gmail.com | +1 (469) 509-2260 | linkedin.com/in/bryanlazodev | github.com/blazo-dev | A.S. in Computer Engineering
+
+PROFESSIONAL SUMMARY
+AI Engineer with 3+ years of hands-on experience building and deploying production-grade RAG pipelines and agentic systems on AWS; a contributor who designs, codes, and ships AI infrastructure across Bedrock Knowledge Bases, MCP integrations, and cloud-native environments.
+
+WORK EXPERIENCE
+
+Workforce Opportunity Services / AAA Auto Club Enterprises | Jr. Software Engineer, AI/Cloud Team
+July 2025 – Present | Coppell, TX
+- Designed and deployed an enterprise MCP server using FastMCP and AWS AgentCore (Runtime + Gateway), enabling external agents including Salesforce Agentforce to access internal Bedrock Knowledge Bases via standard MCP protocols.
+- Engineered a custom AWS Lambda transformation function for chunk-level metadata injection during Bedrock KB ingestion pipeline, improving chatbot response accuracy by 80% and reducing latency by 25%.
+- Participated in migration from Bedrock Agents to AgentCore with Strands Agents, contributing to production deployments of agentic AI systems serving enterprise call center operations.
+- Designed and developed production-grade React frontend for internal AI chatbot used by call center agents during live customer interactions to query enterprise Knowledge Bases in real time.
+- Configured Amazon Cognito authentication and AgentCore Gateway for secure external agent access; deployed containerized MCP services via Docker to AgentCore Runtime (ECS-based).
+- Maintained AWS Lambda functions, DynamoDB data pipelines, and CI/CD workflows using GitHub Actions and AWS CDK (Python).
+
+Grupo Consiti | Java Software Engineer
+June 2023 – November 2023 | San Salvador, El Salvador
+- Developed scalable backend services using Java Spring Boot and Node.js deployed on AWS for multinational retail enterprise SIMAN, operating across Central America.
+- Automated and optimized multi-region ETL pipelines using UC4, handling high-volume transactional data across multiple countries.
+- Collaborated on architecture and development of electronic invoicing system (NestJS) to meet national e-billing compliance regulations in El Salvador.
+- Formally trained and mentored 8 junior developers in Spring Boot and backend best practices; 6 were subsequently hired full-time. Recognized with formal company commendation.
+
+Royal Prestige | Sales Representative
+October 2023 – January 2025 | Dallas-Fort Worth, TX
+- Developed negotiation, objection handling, and adaptability skills in a high-pressure self-managed sales environment.
+
+Applaudo Studios | Angular Developer
+November 2022 – April 2023 | San Salvador, El Salvador
+- Developed responsive UIs using Angular with REST API integration; wrote unit and integration tests using Jest; participated in agile sprints and code reviews.
+
+SKILLS
+AI and Cloud: Amazon Bedrock, Bedrock Knowledge Bases, AgentCore Runtime and Gateway, Strands Agents, FastMCP, MCP Protocol, RAG Pipelines, Chunk-level Metadata, Prompt Engineering, Amazon Cognito, AWS Lambda, DynamoDB, S3, CloudWatch, AWS CDK (Python), Docker, GitHub Actions
+
+Languages and Frameworks: Python, JavaScript, TypeScript, React, Java, Spring Boot, NestJS, Node.js, C#, ASP.NET, Angular, HTML, CSS
+
+Tools and Practices: Git, Postman, Agile/Scrum, CI/CD, Infrastructure as Code (IaC), REST APIs, ETL Pipelines
+
+CERTIFICATIONS
+- AWS Certified Cloud Practitioner — Amazon Web Services, February 2026
