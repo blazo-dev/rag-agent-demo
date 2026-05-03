@@ -100,7 +100,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
-      <header className="w-full bg-white/90 border-b border-slate-200">
+      <header className="sticky top-0 w-full bg-white/90 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-6 py-4 grid grid-cols-[auto,1fr,auto] items-center gap-4">
           <div className="flex gap-4 items-center">
             <div className="h-11 w-11 rounded-full bg-blue-600 text-white flex items-center justify-center text-base font-semibold">
