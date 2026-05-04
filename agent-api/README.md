@@ -1,14 +1,14 @@
 # Agent API
 
 Strands Agent wrapped in a FastAPI REST layer. Connects to the MCP server to retrieve
-context and generates grounded responses using Ollama llama3.2 running locally.
+context and generates grounded responses using Ollama qwen2.5:7b-instruct running locally.
 
 ## What it does
 
 - Exposes POST /chat endpoint
 - Strands Agent calls `query_knowledge_base` tool via MCP protocol
 - Retrieves relevant context from ChromaDB through the MCP server
-- Sends context to Ollama llama3.2 for grounded response generation
+- Sends context to Ollama qwen2.5:7b-instruct for grounded response generation
 - Returns answer as JSON
 
 ## Files
@@ -43,7 +43,7 @@ uv run uvicorn main:app --host 0.0.0.0 --port 8001 --reload
 ## Tech Stack
 
 - Strands Agents
-- Ollama llama3.2 (local, no API key required)
+- Ollama qwen2.5:7b-instruct (local, no API key required)
 - FastAPI
 - FastMCP client
 - Python 3.12+

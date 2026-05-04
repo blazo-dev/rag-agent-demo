@@ -2,7 +2,7 @@
 
 End-to-end RAG-powered AI agent using MCP protocol for tool integration — FastMCP server
 with ChromaDB + sentence-transformers as knowledge base, consumed by a Strands Agent
-powered by Ollama (llama3.2), with a React chat interface.
+powered by Ollama (qwen2.5:7b-instruct), with a React chat interface.
 
 ## Architecture
 
@@ -16,7 +16,7 @@ MCP Server (FastMCP)
     ↓ vector search
 ChromaDB + sentence-transformers
     ↓ context returned
-Ollama llama3.2 (local)
+Ollama qwen2.5:7b-instruct (local)
     ↓
 Response rendered in UI
 
@@ -37,7 +37,7 @@ uv pip install -r requirements.txt
 
 # 2. Install and start Ollama
 # Download from https://ollama.com
-ollama pull llama3.2
+ollama pull qwen2.5:7b-instruct
 
 # 3. Configure environment
 cp agent-api/.env.example agent-api/.env
@@ -61,4 +61,4 @@ pnpm dev
 
 ## Tech Stack
 
-FastMCP · ChromaDB · sentence-transformers · Strands Agents · Ollama llama3.2 · FastAPI · React · Python 3.12+
+FastMCP · ChromaDB · sentence-transformers · Strands Agents · Ollama qwen2.5:7b-instruct · FastAPI · React · Python 3.12+
