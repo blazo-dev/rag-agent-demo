@@ -29,7 +29,7 @@ def query_knowledge_base(query: str) -> str:
 
 def create_agent(use_tools: bool = True, system_prompt: str | None = None) -> Agent:
     model = OllamaModel(
-        model_id="llama3.2",
+        model_id="qwen2.5:7b-instruct",
         host="http://localhost:11434",
     )
     prompt = (
@@ -45,32 +45,26 @@ RULES:
 - If asked about availability or hiring, always include: blazo.dev@gmail.com and linkedin.com/in/bryanlazodev"""
     )
 
-    agent = Agent(
+    return Agent(
         model=model,
         tools=[query_knowledge_base] if use_tools else [],
         system_prompt=prompt,
     )
-    return agent
 
 
 def run_agent(query: str) -> str:
-    context = query_knowledge_base(query)
-
-    if not context or context.strip() == "No relevant information found.":
-        return "I don't have enough information about that. Contact Bryan at blazo.dev@gmail.com"
-
-    agent = create_agent(use_tools=False)
+    agent = create_agent(use_tools=True)
 
     prompt = (
-        "KNOWLEDGE BASE CONTEXT:\n"
-        f"{context}\n\n"
-        "---\n"
         f"QUESTION: {query}\n\n"
         "INSTRUCTIONS:\n"
         "- Answer strictly using the context above.\n"
         "- Be direct and concise — 1 to 3 sentences.\n"
         "- Refer to Bryan in third person.\n"
         "- No greetings, filler, or meta commentary.\n"
+        "- Decide if you need to use the knowledge base tool."
+        "- If the question is about Bryan, you MUST use the tool."
+        "- Answer only with verified information."
         "- If the context is insufficient, respond: "
         "\"I don't have enough information about that. "
         'Contact Bryan at blazo.dev@gmail.com"'

@@ -11,7 +11,7 @@ Bryan Lazo is an AI Engineer with 3+ years of hands-on experience building and d
 
 CURRENT ROLE:
 Company: AAA Auto Club Enterprises (contracted via Workforce Opportunity Services)
-Title: Jr. Software Engineer, AI/Cloud Team
+Title: Software Engineer, AI/Cloud Team
 Start Date: July 2025
 Location: Coppell, TX, United States
 Employment Type: Contractor via WOS (Workforce Opportunity Services)
@@ -27,18 +27,6 @@ CURRENT ROLE RESPONSIBILITIES:
 - Maintained AWS Lambda functions, DynamoDB data pipelines, and CI/CD workflows using GitHub Actions and AWS CDK (Python).
 
 PREVIOUS ROLE 1:
-Company: Grupo Consiti
-Title: Java Software Engineer
-Dates: June 2023 to November 2023
-Location: San Salvador, El Salvador
-Responsibilities:
-- Developed scalable backend services using Java Spring Boot and Node.js deployed on AWS for SIMAN, a multinational retail enterprise operating across Central America.
-- Automated and optimized multi-region ETL pipelines using UC4, handling high-volume transactional data across multiple countries.
-- Collaborated on architecture and development of an electronic invoicing system using NestJS to meet national e-billing compliance regulations in El Salvador.
-- Formally trained and mentored 8 junior developers in Spring Boot and backend best practices. Six of those developers were subsequently hired full-time.
-- Received a formal company commendation for contributions to the training program.
-
-PREVIOUS ROLE 2:
 Company: Royal Prestige
 Title: Sales Representative
 Dates: October 2023 to January 2025
@@ -47,21 +35,26 @@ Note: This was a sales role taken during a career transition period, not a softw
 Responsibilities:
 - Developed negotiation, objection handling, and adaptability skills in a high-pressure self-managed outside sales environment.
 
-PREVIOUS ROLE 3:
-Company: Applaudo Studios
-Title: Angular Developer
-Dates: November 2022 to April 2023
+PREVIOUS ROLE 2:
+Company: Grupo Consiti
+Title: Software Engineer
+Dates: November 2022 to November 2023
 Location: San Salvador, El Salvador
 Responsibilities:
+- Developed scalable backend services using Java Spring Boot and Node.js deployed on AWS for SIMAN, a multinational retail enterprise operating across Central America.
+- Automated and optimized multi-region ETL pipelines using UC4, handling high-volume transactional data across multiple countries.
+- Collaborated on architecture and development of an electronic invoicing system using NestJS to meet national e-billing compliance regulations in El Salvador.
+- Formally trained and mentored 8 junior developers in Spring Boot and backend best practices. Six of those developers were subsequently hired full-time.
+- Received a formal company commendation for contributions to the training program.
 - Developed responsive UIs using Angular with REST API integration.
 - Wrote unit and integration tests using Jest.
 - Participated in agile sprints and peer code reviews.
 
+
 COMPLETE WORK HISTORY IN ORDER:
-1. Applaudo Studios - Angular Developer - November 2022 to April 2023
-2. Grupo Consiti - Java Software Engineer - June 2023 to November 2023
-3. Royal Prestige - Sales Representative - October 2023 to January 2025
-4. AAA Auto Club Enterprises via WOS - Jr. Software Engineer AI/Cloud - July 2025 to Present
+1. Grupo Consiti - Software Engineer - November 2022 to November 2023
+2. Royal Prestige - Sales Representative - October 2023 to January 2025
+3. AAA Auto Club Enterprises via WOS - Software Engineer AI/Cloud - July 2025 to Present
 
 TECHNICAL SKILLS:
 
@@ -88,13 +81,13 @@ KEY ACHIEVEMENTS:
 FREQUENTLY ASKED QUESTIONS:
 
 Q: What is Bryan's current job?
-A: Bryan currently works as a Jr. Software Engineer on the AI/Cloud team at AAA Auto Club Enterprises, contracted through Workforce Opportunity Services. He is based in Coppell, TX.
+A: Bryan currently works as a Software Engineer on the AI/Cloud team at AAA Auto Club Enterprises, contracted through Workforce Opportunity Services. He is based in Coppell, TX.
 
 Q: How many years of experience does Bryan have?
-A: Bryan has 3+ years of professional software engineering experience, starting in November 2022 at Applaudo Studios.
+A: Bryan has 3+ years of professional software engineering experience, starting in November 2022 at Grupo Consiti.
 
 Q: What companies has Bryan worked for?
-A: Bryan has worked for Applaudo Studios, Grupo Consiti, Royal Prestige, and AAA Auto Club Enterprises via Workforce Opportunity Services.
+A: Bryan has worked for Grupo Consiti, Royal Prestige, and AAA Auto Club Enterprises via Workforce Opportunity Services.
 
 Q: What is Bryan's main expertise?
 A: Bryan specializes in AI engineering, specifically RAG pipelines, agentic systems, and MCP integrations on AWS using services like Amazon Bedrock, AgentCore, and Strands Agents.
