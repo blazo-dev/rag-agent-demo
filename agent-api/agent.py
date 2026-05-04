@@ -1,9 +1,9 @@
 import os
-import asyncio
 
-from fastmcp import Client
-from strands import Agent, tool
+from mcp.client.streamable_http import streamable_http_client
+from strands import Agent
 from strands.models.ollama import OllamaModel
+from strands.tools.mcp.mcp_client import MCPClient
 
 try:
     from dotenv import load_dotenv
@@ -15,19 +15,20 @@ except Exception:
 MCP_SERVER_URL = os.getenv("MCP_SERVER_URL", "http://localhost:8000/mcp")
 
 
-@tool
-def query_knowledge_base(query: str) -> str:
-    """Query the RAG knowledge base via MCP and return relevant context."""
+def _create_mcp_client() -> MCPClient:
+    def create_transport():
+        url = MCP_SERVER_URL
+        if not url.endswith("/"):
+            url = f"{url}/"
+        return streamable_http_client(url)
 
-    async def _query():
-        async with Client(MCP_SERVER_URL) as client:
-            result = await client.call_tool("query_knowledge_base", {"query": query})
-            return result.data
-
-    return asyncio.run(_query())
+    return MCPClient(create_transport)
 
 
-def create_agent(use_tools: bool = True, system_prompt: str | None = None) -> Agent:
+def create_agent(
+    system_prompt: str | None = None,
+    tools: list | None = None,
+) -> Agent:
     model = OllamaModel(
         model_id="qwen2.5:7b-instruct",
         host="http://localhost:11434",
@@ -45,16 +46,12 @@ RULES:
 - If asked about availability or hiring, always include: blazo.dev@gmail.com and linkedin.com/in/bryanlazodev"""
     )
 
-    return Agent(
-        model=model,
-        tools=[query_knowledge_base] if use_tools else [],
-        system_prompt=prompt,
-    )
+    resolved_tools = tools if tools is not None else []
+
+    return Agent(model=model, tools=resolved_tools, system_prompt=prompt)
 
 
 def run_agent(query: str) -> str:
-    agent = create_agent(use_tools=True)
-
     prompt = (
         f"QUESTION: {query}\n\n"
         "INSTRUCTIONS:\n"
@@ -70,5 +67,10 @@ def run_agent(query: str) -> str:
         'Contact Bryan at blazo.dev@gmail.com"'
     )
 
-    response = agent(prompt)
+    mcp_client = _create_mcp_client()
+    with mcp_client:
+        tools = mcp_client.list_tools_sync()
+        agent = create_agent(tools=tools)
+        response = agent(prompt)
+
     return str(response).strip()
